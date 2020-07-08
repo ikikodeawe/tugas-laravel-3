@@ -23,7 +23,7 @@
 					<td>{{ $key+1 }}</td>
 					<td>{{ $tanya->judul }}</td>
 					<td>
-						<a href="/" class="btn btn-sm btn-info">Tampil</a>
+						<a href="/jawaban/{{$tanya->id}}" class="btn btn-sm btn-info">Tampil</a>
 					</td>
 				</tr>
 				@endforeach

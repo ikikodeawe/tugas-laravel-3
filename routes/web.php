@@ -18,6 +18,9 @@ Route::get('/', function () {
 Route::get('/pertanyaan','PertanyaanController@index');
 
 
+//Route::get('/pertanyaan/{id}','PertanyaanController@show');
+
+
 Route::get('/pertanyaan/create','PertanyaanController@create');
 
 

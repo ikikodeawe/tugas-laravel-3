@@ -16,6 +16,11 @@ class PertanyaanModel
 		$new_ask = DB::table('pertanyaan')->insert($data);
 		return $new_ask;
 	}
+
+	public static function get_by_id($id){
+		$tanya = DB::table('pertanyaan')->where('id',$id)->first();
+		return $tanya;
+	}
 }
 
 ?>

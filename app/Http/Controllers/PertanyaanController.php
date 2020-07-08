@@ -17,9 +17,19 @@ class PertanyaanController extends Controller
     	return view('pertanyaan.index', compact('ask'));
     }
 
+    /*public function show($id){
+    	$tanya = PertanyaanModel::get_by_id($id);
+
+    	return view('pertanyaan.show', compact('tanya'));
+    }*/
+
     public function store(Request $request){
     	$new_ask = PertanyaanModel::save($request->all());
 
     	return redirect('/pertanyaan');
+    }
+
+    public function edit(){
+    	
     }
 }
