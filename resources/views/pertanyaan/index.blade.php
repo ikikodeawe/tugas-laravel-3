@@ -24,6 +24,7 @@
 					<td>{{ $tanya->judul }}</td>
 					<td>
 						<a href="/jawaban/{{$tanya->id}}" class="btn btn-sm btn-info">Tampil</a>
+						<a href="/pertanyaan/{{$tanya->id}}/edit" class="btn btn-sm btn-warning">Ubah</a>
 					</td>
 				</tr>
 				@endforeach

@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Route::get('/pertanyaan','PertanyaanController@index');
 
+Route::get('/pertanyaan/{id}/edit','PertanyaanController@edit');
+
+Route::put('/pertanyaan/{id}','PertanyaanController@update');
+
 
 //Route::get('/pertanyaan/{id}','PertanyaanController@show');
 

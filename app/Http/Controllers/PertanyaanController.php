@@ -29,7 +29,14 @@ class PertanyaanController extends Controller
     	return redirect('/pertanyaan');
     }
 
-    public function edit(){
-    	
+    public function edit($id){
+    	$ask = PertanyaanModel::get_by_id($id);
+    	return view('pertanyaan.edit', compact('ask'));
+    }
+
+     public function update($id, Request $request){
+    	$ask = PertanyaanModel::update($id, $request->all());
+
+    	return redirect('/pertanyaan');
     }
 }

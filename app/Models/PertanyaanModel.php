@@ -21,6 +21,15 @@ class PertanyaanModel
 		$tanya = DB::table('pertanyaan')->where('id',$id)->first();
 		return $tanya;
 	}
+
+	public static function update($id, $request){
+		$tanya = DB::table('pertanyaan')->where('id',$id)
+		->update([
+			'judul' => $request['judul'],
+			'isi'	=> $request['isi']
+		]);
+		return $tanya;
+	}
 }
 
 ?>
