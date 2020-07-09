@@ -39,4 +39,9 @@ class PertanyaanController extends Controller
 
     	return redirect('/pertanyaan');
     }
+
+    public function delete($id){
+    	$hapus = PertanyaanModel::delete($id);
+    	return redirect('/pertanyaan');
+    }
 }

@@ -22,6 +22,11 @@ class PertanyaanModel
 		return $tanya;
 	}
 
+	public static function delete($id){
+		$hapus = DB::table('pertanyaan')->where('id',$id)->delete();
+		return $hapus;
+	}
+
 	public static function update($id, $request){
 		$tanya = DB::table('pertanyaan')->where('id',$id)
 		->update([

@@ -25,6 +25,11 @@
 					<td>
 						<a href="/jawaban/{{$tanya->id}}" class="btn btn-sm btn-info">Tampil</a>
 						<a href="/pertanyaan/{{$tanya->id}}/edit" class="btn btn-sm btn-warning">Ubah</a>
+						<form action="/pertanyaan/{{$tanya->id}}" method="POST" style="display: inline">
+							@csrf
+							@method('DELETE')	
+							<button type="submit" class="btn btn-danger">Hapus</button>
+						</form>
 					</td>
 				</tr>
 				@endforeach

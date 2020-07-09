@@ -21,6 +21,7 @@ Route::get('/pertanyaan/{id}/edit','PertanyaanController@edit');
 
 Route::put('/pertanyaan/{id}','PertanyaanController@update');
 
+Route::delete('/pertanyaan/{id}', 'PertanyaanController@delete');
 
 //Route::get('/pertanyaan/{id}','PertanyaanController@show');
 
