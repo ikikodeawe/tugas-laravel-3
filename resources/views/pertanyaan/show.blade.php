@@ -19,8 +19,6 @@
 
 		<p>{{$tanya->isi}}</p>
 
-		<!-- Social sharing buttons -->
-		<button type="button" class="btn btn-default btn-sm"><i class="fas fa-share"></i> Share</button>
 	</div>
 	<!-- /.card-body -->
 	<div class="card-footer card-comments">
@@ -48,8 +46,9 @@
 			<img class="img-fluid img-circle img-sm" src="{{ asset('adminlte/dist/img/user4-128x128.jpg')}}" alt="Alt Text">
 			<!-- .img-push is used to add margin to elements next to floating images -->
 			<div class="img-push">
-				<input type="text" class="form-control form-control-sm" name="jawab" placeholder="Press enter to post comment">
+				<input type="text" class="form-control form-control-sm" name="isi" placeholder="Press enter to post answer">
 			</div>
+			<input type="hidden" name="pertanyaan_id" class="form-control" id="pertanyaan_id" value="{{$tanya->id}}">
 		</form>
 	</div>
 	<!-- /.card-footer -->

@@ -13,13 +13,13 @@ class JawabanModel
 
 	public static function save($data){
 		unset($data["_token"]);
-		$new_ask = DB::table('jawaban')->insert($data);
-		return $new_ask;
+		$new_answer = DB::table('jawaban')->insert($data);
+		return $new_answer;
 	}
 
 	public static function get_by_id($id){
-		$tanya = DB::table('jawaban')->where('id',$id)->first();
-		return $tanya;
+		$jawab = DB::table('jawaban')->where('id',$id)->first();
+		return $jawab;
 	}
 }
 

@@ -16,8 +16,8 @@ class JawabanController extends Controller
     }
 
     public function store(Request $request){
-    	$new_ask = PertanyaanModel::save($request->all());
+    	$new_answer = JawabanModel::save($request->all());
 
-    	return redirect('/pertanyaan');
+    	return redirect('/jawaban/'.$request['pertanyaan_id']);
     }
 }
